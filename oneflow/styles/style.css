@@ -1,0 +1,495 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* work-sans-regular - latin */
+@font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/work-sans-v17-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/work-sans-v17-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+  /* roboto-regular - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/roboto-v30-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/roboto-v30-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* roboto-900 - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: local(''),
+         url('../fonts/roboto-v30-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/roboto-v30-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+  html {
+    box-sizing: border-box;
+  }
+  *,*::before, *::after{
+    box-sizing: inherit;
+  }
+
+  body{
+    font-family:"Work Sans";
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: #013A4C;
+  }
+
+  .wrapper{
+    max-width: 1152px;
+    margin: 0 auto;
+  }
+
+  /* Header styles start */
+
+header{
+    position: absolute;
+    height: 80px;
+    left: 0%;
+    right: 0%;
+    top: 0px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(1, 58, 76, 0.2);
+    border-radius: 0px;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+  .header_logo{
+    position: absolute;
+    left: calc(50% - 140px/2 - 602px);
+    top: 23px;
+
+  }
+.header_nav{
+  
+        position: relative;
+        height: 80px;
+        left: 41.29%;
+        right: 0%;
+        margin-right: 325px;
+        /* top: calc(50% - 80px/2); */
+  }
+.header_list{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}  
+.header_item{
+    margin-right: 32px;
+
+}
+.header_item:last-child{
+    margin-right: 0;
+}
+
+.header_link{
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+}
+
+.header_link:hover, .header_link:focus, .header_link:active{
+    opacity: .25;
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+height: 38px;
+left: 68.95%;
+right: 6.08%;
+top: calc(50% - 38px/2);
+}
+
+.button_1{
+    position: absolute;
+height: 40px;
+right: 42.13%;
+padding: 11px 17px;
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+
+text-align: center;
+
+color: #013A4C;
+background: #FFD063;
+border: 1px solid #FFD063;
+border-radius: 4px;
+}
+
+.button_2{
+    position: absolute;
+height: 40px;
+left: 61.93%;
+font-size: 13px;
+line-height: 18px;
+text-align: center;
+color: #013A4C;
+padding: 11px 17px;
+background: #FFFFFF;
+border: 1px solid #346170;
+border-radius: 4px;
+}
+
+.header_lang_logo{
+    position: absolute;
+/* left: calc(50% - 24px/2 + 406.5px);
+top: 28px; */
+top: 28px;
+left: 97%;
+}
+
+/* Header styles end */
+
+/* Intro styles start */
+
+.intro{
+    min-height: 770px;
+    background: url(../img/female.jpg) no-repeat center;
+    background-size: cover;
+    padding-top: 290px ;
+    
+}
+
+.intro_tittle{
+    height: 78px;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 76px;
+line-height: 78px;
+letter-spacing: 2px;
+color: #013A4C;
+margin-bottom: 31px;
+}
+
+.intro_subtittle{
+max-width: 491px;
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 32px;
+letter-spacing: 0.5px;
+color: #013A4C;
+margin-bottom: 25px;
+}
+
+.button_intro1{
+height: 50px;
+background: #FFD063;
+border: 1px solid #FFD063;
+border-radius: 4px;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+text-align: center;
+color: #013A4C;
+padding: 15px 21px;
+margin-right: 16px;
+}
+
+.button_intro1:hover, .button_intro1:focus, .button_intro1:active{
+background: #e7ac24;
+}
+
+.button_intro2{
+height: 50px;
+background: #013A4C;
+border: 1px solid #013A4C;
+border-radius: 4px;
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+text-align: center;
+color: #FFFFFF;
+padding: 15px 21px;
+}
+
+.button_intro2:hover, .button_intro2:focus, .button_intro2:active{
+    background: #02242f;
+}
+/* Intro styles end */
+
+/* Companies start */
+
+.companies_wrap{
+    height: 288px;
+    background: #013A4C;
+    /* margin: 0 auto; */
+}
+
+.companies_tittle{
+/* display: inline;     */
+/* min-width: 528px; */
+display: flex;
+flex-wrap: wrap;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 38px;
+text-align: center;
+letter-spacing: 0.7px;
+color: #FFFFFF;
+padding-top: 80px;
+padding-left: 456px;
+/* padding-right: 456px; */
+padding-bottom: 24px;
+margin: 0 auto;
+}
+.companies_cards{
+display: flex;
+flex-wrap: wrap;
+height: 66px;
+}
+.companies_cards1{
+    padding-left: 262px;
+    padding-top: 20px;
+    padding-bottom: 19px;
+    padding-right: 32px;
+}
+.companies_cards2{
+    /* padding-left: ; */
+    /* padding-top: ; */
+    /* padding-bottom: ; */
+    padding-right: 32px;
+}
+
+.companies_cards3{
+    /* padding-left: ; */
+    padding-top: 24px;
+    padding-bottom: 24px ;
+    padding-right: 32px;
+}
+
+.companies_cards4{
+    /* padding-left: ; */
+    padding-top: 28px;
+    padding-bottom: 27px;
+    padding-right: 32px;
+}
+
+.companies_cards5{
+    /* padding-left: ; */
+    padding-top: 15px;
+    padding-bottom: 16px;
+    padding-right: 32px;
+}
+
+.companies_cards6{
+    /* padding-left: ; */
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-right: 32px;
+}
+
+.companies_cards7{
+    /* padding-left: ; */
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 0;
+}
+
+.signatures{
+    min-height: 507px;
+    background: #013A4C;
+    /* padding-top: 290px ; */
+    
+}
+/* Companies end */
+
+/* Signature start */
+
+.signature_tittle1{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 72px;
+line-height: 72px;
+/* or 100% */
+
+letter-spacing: 0.4px;
+
+color: #F2DCE4;
+}
+
+.signature_tittle2{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 72px;
+    letter-spacing: 0.4px;
+    color: #F2DCE4;
+    max-width: 402px;
+    height: 216px;
+    margin-bottom: 38px;
+    }
+
+.signature_subtittle{
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 28px;
+    color: #FFFFFF; 
+    height: 84px;
+    max-width: 528px;
+    margin-bottom: 20px; 
+}
+
+.signature_button{
+height: 50px;
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+text-align: center;
+color: #013A4C;
+background: #FFD063;
+border: 1px solid #FFD063;
+border-radius: 4px;
+padding-top: 14px;
+padding-bottom: 16px;
+padding-left: 21px;
+padding-right: 21px;
+}
+
+.img_subtittle{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+width: 500px;
+height: 500px;
+left: calc(50% - 500px/2 + 312px);
+/* top: calc(50% - 500px/2); */
+margin-top: -500px;
+}
+
+/* Signature end */
+
+/* Collaborate start */
+.collaborate{
+    min-height: 856px;
+    background: #013A4C; 
+    padding: 128px 144px;
+}
+
+.header_collaborate{
+    width: 1152px;
+    height: 600px;
+    background: #D3E8F4;
+    margin:  0 auto;
+}
+
+
+/* Collaborate end */
+
+/* PressPlay start */
+.pressplay{
+min-height: 844px;
+background: url(../img/PressPlay.jpg) no-repeat center;
+background-size: cover;
+}
+
+/* PressPlay end */
+
+/* Platforms start */
+
+.platforms{
+    min-height: 2432px;
+    background: url(../img/Platforms.jpg);
+}
+
+.platforms_head{
+    display: flex;
+    flex-wrap: wrap;
+    width: 840px;
+    height: 240px;
+    padding-top: 122px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 80px;
+    text-align: center;
+    letter-spacing: 0.7px;
+    color: #013A4C;
+    margin: 0 auto;
+    margin-bottom: 150px;
+}
+
+.friction{
+min-height: 380px;
+}
